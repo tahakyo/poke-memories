@@ -13,6 +13,10 @@ export default {
   name: 'App',
   data() {
     return {
+      settings: {
+        totalOfBlocks: 0,
+        cardContext: [],
+      },
       statusMatch: "default",
     }
   },
@@ -22,7 +26,13 @@ export default {
   },
   methods: {
     onHandleBeforeStart(config) {
-      console.log('running before start', config)
+      // console.log('running before start', config)
+      this.settings.totalOfBlocks = config.totalOfBlocks;
+      const firstCards = Array.from(
+        { length: this.settings.totalOfBlocks / 2 },
+        (_,i) => i+1,
+        );
+        console.log(firstCards)
 
       this.statusMatch = 'match';
     }

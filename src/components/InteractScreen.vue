@@ -1,6 +1,6 @@
 <template>
   <div class="scr">
-    Interact screen
+    <h1>Interact screen</h1>
     <card-flip />
   </div>
 </template>
